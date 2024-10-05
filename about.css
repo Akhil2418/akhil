@@ -1,0 +1,370 @@
+/* Basic reset and font setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-ct6DYdHBdCEDLT5lMMB5cbf0/user-9Yl6Oo6Oa5Ot7Wd9Xm7Rl5Ue/img-Hy5Hy5Hy5Hy5Hy5Hy5Hy5Hy.png?st=2023-04-14T09%3A53%3A22Z&se=2023-04-14T11%3A53%3A22Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-04-13T20%3A55%3A41Z&ske=2023-04-14T20%3A55%3A41Z&sks=b&skv=2021-08-06&sig=Hy5Hy5Hy5Hy5Hy5Hy5Hy5Hy5Hy5Hy5Hy5Hy5Hy5Hy5%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(52, 152, 219, 0.9);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover, .nav a.active {
+    text-decoration: none;
+    color: #f39c12;
+    transform: translateY(-2px);
+}
+
+.btnlogin-popup {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btnlogin-popup:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Login Wrapper styles */
+.wrapper {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 4rem auto;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: all 0.3s ease;
+}
+
+.icon-close:hover {
+    color: #e74c3c;
+    transform: rotate(90deg);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+.input-box label {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    color: #7f8c8d;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -0.5rem;
+    left: 0.8rem;
+    font-size: 0.75rem;
+    background-color: white;
+    padding: 0 0.25rem;
+    color: #3498db;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 1rem;
+    top: 0.8rem;
+    color: #7f8c8d;
+}
+
+.remember-forget {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.remember-forget label {
+    display: flex;
+    align-items: center;
+}
+
+.remember-forget input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.remember-forget a {
+    color: #3498db;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.remember-forget a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-register {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.login-register a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.login-register a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* About Us Page Styles */
+.about-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #302f2d;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.5rem;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about-card {
+    flex: 1 1 300px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h2 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.about-card ul {
+    list-style-type: none;
+    padding-left: 1rem;
+   
+}
+
+
+.about-card li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    text-align: center;
+}
+
+.about-card li::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.about-team {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-team h2 {
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 2rem;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    color: #7f8c8d;
+}
+
+footer {
+    background-color: rgba(52, 152, 219, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btnlogin-popup {
+        margin-top: 1rem;
+    }
+
+    .wrapper {
+        margin: 2rem auto;
+        padding: 2rem;
+    }
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero p {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}
