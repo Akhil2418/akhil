@@ -14,36 +14,62 @@
             <a href="index.html">Home</a>
             <a href="contact.html">Contact</a>
             <a href="about.html">About Us</a>
-            <button class="btnlogin-popup">Login</button>
+       
         </nav>
     </header>
 
-    <div class="wrapper">
-        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
-        <div class="form-box login">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Username</label>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Welcome to Akhil Thakur's Portfolio</h1>
+                   
                 </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Password</label>
+            </div>
+        </section>
+
+        <section id="projects" class="projects reveal">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card" style="--i: 1;">
+                        <img src="images/Chat-room.png" height="200" width="300" alt="Project 1">
+                        <h3>Real Time Communication Web Application</h3>
+                        <p>Real time Communication Website built with  Node.js, JS, HTML, CSS</p>
+                        <div class="project-links">
+                            <a href="https://akhil2418.github.io/realtime-communication/" target="_blank" class="btn-project">Live Demo</a>
+                            <a href="https://github.com/akhilthakur/project1" target="_blank" class="btn-github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card" style="--i: 2;">
+                        <img src="images/akhil.jpg" height="200" width="300" alt="Project 2">
+                        <h3>Birthday Wish Website</h3>
+                        <p>Unique Wish by Using Link</p>
+                        <div class="project-links">
+                            <a href="https://akhil2418.github.io/playmusic/" target="_blank" class="btn-project">Live Demo</a>
+                            <a href="https://github.com/akhilthakur/project2" target="_blank" class="btn-github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card" style="--i: 3;">
+                        <img src="images/akhil.jpg" height="200" width="300" alt="Project 1">
+                        <h3>Mobile App</h3>
+                        <p>Cross-platform mobile app developed with React Native</p>
+                        <div class="project-links">
+                            <a href=" " target="_blank" class="btn-project">Live Demo</a>
+                            <a href="https://github.com/akhilthakur/project3" target="_blank" class="btn-github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="remember-forget">
-                    <label><input type="checkbox">Remember me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
+            </div>
+        </section>
+
 
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
