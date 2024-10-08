@@ -253,7 +253,7 @@ header {
     text-align: center;
     margin-bottom: 3rem;
     color: #588dff;
-    text-shadow: 4px 4px 7px rgba(151, 146, 146, 0.852);
+    text-shadow: 4px 4px 7px rgba(57, 56, 56, 0.852);
 }
 
 
@@ -262,14 +262,16 @@ header {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .project-card {
     background-color: var(--color-background);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     position: relative;
 }
@@ -309,6 +311,7 @@ header {
 
 .btn-project, .btn-github {
     display: inline-block;
+
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-weight: 500;
@@ -319,16 +322,19 @@ header {
 .btn-project {
     background-color: var(--color-primary);
     color: var(--color-background);
+
+
 }
 
 .btn-github {
     background-color: #ffffff;
     color: var(--color-background);
+    
 }
 
 .btn-project:hover, .btn-github:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
 /* Footer */
