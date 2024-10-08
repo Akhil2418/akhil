@@ -390,3 +390,10 @@ footer .btn-github {
     flex: 1; 
 }
 
+footer {
+    background-color: rgba(52, 152, 219, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
