@@ -1,5 +1,6 @@
 /* Basic reset and font setup */
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -252,7 +253,8 @@ header {
     color: var(--color-primary);
     text-align: center;
     margin-bottom: 3rem;
-    color: #588dff;
+    color: #4c4c4c;
+    padding: 10px;
     text-shadow: 4px 4px 7px rgba(57, 56, 56, 0.852);
 }
 
